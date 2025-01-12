@@ -14,86 +14,79 @@ import Portfolio from '../Portfolio';
 
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
+    title: 'Space Property',
+    subtitle: 'Live Link',
+    href: 'https://spaceproperties.ae/',
     src: '/images/work/space.jpg',
-    category: 'ui_ux_design',
+    category: 'web_development',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
+    title: 'Aravia',
+    subtitle: 'Live Link',
+    href: 'https://aravia.ae/',
     src: '/images/work/saloon.jpg',
-    category: 'logo_design',
+    category: 'web_development',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
+    title: 'P C F',
+    subtitle: 'Live Link',
+    href: 'https://pcfgcc.com/',
     src: '/images/work/pdp.jpg',
-    category: 'web_design',
+    category: 'web_development',
+  },
+  {
+    title: 'Max Office',
+    subtitle: 'Live Link',
+    href: 'https://www.maxoffice.ae/',
+    src: '/images/work/maxoffice.jpg',
+    category: 'web_development',
+  },
+  {
+    title: 'Maxhome property',
+    subtitle: 'Live Link',
+    href: '/portfolio/portfolio-details',
+    src: '/images/work/maxhome.jpg',
+    category: 'web_development',
   },
   {
     title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    subtitle: 'Live Link',
     href: '/portfolio/portfolio-details',
-    src: '/images/work/maxoffice.jpg',
+    src: '/images/work/phone.jpg',
     category: 'mobile_apps',
   },
   {
     title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/work/maxhome.jpg',
-    category: 'ui_ux_design',
-  },
-  {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
-    href: '/portfolio/portfolio-details',
-    src: '/images/work/phone.jpg',
-    category: 'web_design',
-  },
-  {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    subtitle: 'Live Link',
     href: '/portfolio/portfolio-details',
     src: '/images/work/flower shop.jpg',
-    category: 'logo_design',
+    category: 'web_development',
   },
   {
     title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    subtitle: 'Live Link',
     href: '/portfolio/portfolio-details',
     src: '/images/work/amt.jpg',
-    category: 'ui_ux_design',
+    category: 'web_development',
   },
   {
     title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    subtitle: 'Live Link',
     href: '/portfolio/portfolio-details',
     src: '/images/work/caffe.jpg',
-    category: 'logo_design',
+    category: 'web_development',
   },
 ];
 const categoryMenu = [
   {
-    title: 'Web Design',
-    category: 'web_design',
-  },
-  {
-    title: 'UI/UX Design',
-    category: 'ui_ux_design',
+    title: 'Web Development',
+    category: 'web_development',
   },
   {
     title: 'Mobile Apps',
     category: 'mobile_apps',
   },
-  {
-    title: 'Logo Design',
-    category: 'logo_design',
-  },
+
 ];
 
 export default function ServicesPage() {

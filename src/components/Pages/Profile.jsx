@@ -41,11 +41,7 @@ export default function Profile() {
   }, []);
   return (
     <>
-      <PageHeading
-        title="Arshad Vk"
-        bgSrc="/images/team_hero_bg.jpeg"
-        pageLinkText="Profile"
-      />
+     
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Div className="row align-items-center">
@@ -68,22 +64,31 @@ export default function Profile() {
               <Div className="cs-separator cs-accent_bg" />
               <Div className="cs-height_45 cs-height_lg_25" />
               <p className="cs-m0">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium voltire doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt.
+                I am an experienced software developer currently based in Abu
+                Dhabi, with a proven track record of delivering high-quality web
+                and software solutions. My journey began in India, where I
+                worked as a web developer, building robust and scalable
+                applications for various clients. Over the years, I have
+                cultivated a deep understanding of both frontend and backend
+                technologies, enabling me to create seamless, full-stack
+                solutions.
               </p>
               <Div className="cs-height_25 cs-height_lg_20" />
-              <p className="cs-m0">
-                Ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius modi tempora incidunt ut labore et dolore
-                magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-                quis nostrum exercitationem ullam corporis suscipit.
-              </p>
-              <Div className="cs-height_45 cs-height_lg_30" />
+              <ul>
+                <li>
+                Backend Development: Proficient in PHP, Laravel, and Node.js, specializing in crafting secure and efficient server-side architectures.
+                </li>
+                <li>
+                Frontend Development: Skilled in React, Next.js, Tailwind, and TypeScript, creating intuitive, responsive, and user-friendly interfaces.      
+              </li>
+
+              <li>
+              Cloud and DevOps: Experienced in deploying and managing applications on AWS, cPanel, and other hosting environments                </li>
+                <li>
+                Problem Solving: Strong grasp of data structures and algorithms, enabling me to solve complex problems effectively.              </li>
+              </ul>
+              <Div className="cs-height_25 cs-height_lg_20" />
+            
               <SocialWidget />
             </Div>
           </Div>
