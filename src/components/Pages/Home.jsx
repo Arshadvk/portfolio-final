@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../Card';
 import FunFact from '../FunFact';
 import Hero from '../Hero';
@@ -15,6 +15,10 @@ import TeamSlider from '../Slider/TeamSlider';
 import VideoModal from '../VideoModal';
 import TimelineSlider from '../Slider/TimelineSlider';
 import { pageTitle } from '../../helper';
+import Portfolio from '../Portfolio';
+import { Icon } from '@iconify/react';
+
+
 // Hero Social Links
 const heroSocialLinks = [
   {
@@ -46,7 +50,7 @@ const funfaceData = [
     factNumber: '550',
   },
 ];
-const portfolioData = [
+const portfolioData_2 = [
   {
     title: 'Colorful Art Work',
     subtitle: 'See Details',
@@ -72,10 +76,87 @@ const portfolioData = [
     src: '/images/portfolio_3.jpeg',
   },
 ];
+const categoryMenu = [
+  {
+    title: 'Web Development',
+    category: 'web_development',
+  },
+  {
+    title: 'Mobile Apps',
+    category: 'mobile_apps',
+  },]
+
+  const portfolioData = [
+    {
+      title: 'Space Property',
+      subtitle: 'Live Link',
+      href: 'https://spaceproperties.ae/',
+      src: '/images/work/space.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'Aravia',
+      subtitle: 'Live Link',
+      href: 'https://aravia.ae/',
+      src: '/images/work/saloon.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'P C F',
+      subtitle: 'Live Link',
+      href: 'https://pcfgcc.com/',
+      src: '/images/work/pdp.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'Max Office',
+      subtitle: 'Live Link',
+      href: 'https://www.maxoffice.ae/',
+      src: '/images/work/maxoffice.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'Maxhome property',
+      subtitle: 'Live Link',
+      href: '/portfolio/portfolio-details',
+      src: '/images/work/maxhome.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'Colorful Art Work',
+      subtitle: 'Live Link',
+      href: '/portfolio/portfolio-details',
+      src: '/images/work/phone.jpg',
+      category: 'mobile_apps',
+    },
+    {
+      title: 'Colorful Art Work',
+      subtitle: 'Live Link',
+      href: '/portfolio/portfolio-details',
+      src: '/images/work/flower shop.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'Colorful Art Work',
+      subtitle: 'Live Link',
+      href: '/portfolio/portfolio-details',
+      src: '/images/work/amt.jpg',
+      category: 'web_development',
+    },
+    {
+      title: 'Colorful Art Work',
+      subtitle: 'Live Link',
+      href: '/portfolio/portfolio-details',
+      src: '/images/work/caffe.jpg',
+      category: 'web_development',
+    },
+  ];
 
 export default function Home() {
   pageTitle('Home');
-
+      const [active, setActive] = useState('all');
+      const [itemShow, setItemShow] = useState(7);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -168,6 +249,72 @@ export default function Home() {
         </Div>
       </Div>
       {/* End Service Section */}
+
+
+    <Div className="container">
+                  <Div className="cs-portfolio_1_heading">
+                    <SectionHeading title="Some recent work" subtitle="Our Portfolio" />
+                    <Div className="cs-filter_menu cs-style1">
+                      <ul className="cs-mp0 cs-center">
+                        <li className={active === 'all' ? 'active' : ''}>
+                          <span onClick={() => setActive('all')}>All</span>
+                        </li>
+                        {categoryMenu.map((item, index) => (
+                          <li
+                            className={active === item.category ? 'active' : ''}
+                            key={index}
+                          >
+                            <span onClick={() => setActive(item.category)}>
+                              {item.title}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Div>
+                  </Div>
+                  <Spacing lg="90" md="45" />
+                  <Div className="row">
+                    {portfolioData.slice(0, itemShow).map((item, index) => (
+                      <Div
+                        className={`${ index === 3 || index === 6 ? 'col-lg-8' : 'col-lg-4'
+                        } ${
+                          active === 'all'
+                            ? ''
+                            : !(active === item.category)
+                            ? 'd-none'
+                            : ''
+                        }`}
+                        key={index}
+                      >
+                        <Portfolio
+                          title={item.title}
+                          subtitle={item.subtitle}
+                          href={item.href}
+                          src={item.src}
+                          variant="cs-style1 cs-type1"
+                        />
+                        <Spacing lg="25" md="25" />
+                      </Div>
+                    ))}
+                  </Div>
+          
+                  <Div className="text-center">
+                    {portfolioData.length <= itemShow ? (
+                      ''
+                    ) : (
+                      <>
+                        <Spacing lg="65" md="40" />
+                        <span
+                          className="cs-text_btn"
+                          onClick={() => setItemShow(itemShow + 3)}
+                        >
+                          <span>Load More</span>
+                          <Icon icon="bi:arrow-right" />
+                        </span>
+                      </>
+                    )}
+                  </Div>
+                </Div>
 
       {/* Start Portfolio Section */}
       <Spacing lg="150" md="50" />
